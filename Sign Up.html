@@ -19,21 +19,21 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
-              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 200px;">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Sign Up.html">Sign Up</a>
+                  <a class="badge text-bg-primary" aria-current="page" href="Sign Up.html">Sign Up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Inicio.html">Inicio</a>
+                    <a class="badge text-bg-danger" aria-current="page" href="Inicio.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="Perfil.html">Perfil</a>
+                  <a class="badge text-bg-warning" aria-current="page" href="Perfil.html">Perfil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Historial.html">Historial</a>
+                    <a class="badge text-bg-info" aria-current="page" href="Historial.html">Historial</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="Servicios.html">Servicios</a>
+                    <a class="badge text-bg-success" aria-current="page" href="Servicios.html">Servicios</a>
                   </li>
 
                 </li>
@@ -49,6 +49,147 @@
 
     </body>
     <img src="assets/Screenshot_1.jpg" class="img-thumbnail" alt="...">
+    <div class="container text-center">
     <h1>Sign Up</h1>
+    </div>
+
+    <div class="container text-center">
+      <div class="card text-bg-danger mb-3" style="max-width: 1400px;">
+        <div class="card-header"></h1>
+        <div class="card-body">
+          <h5 class="card-title"></h5>  
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-md-5">
+        <label for="validationCustom01" class="form-label">Nombre Propietario</label>
+        <input type="text" class="form-control" id="validationCustom01" value="" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="validationCustom010" class="form-label">Documento Propietario</label>
+        <input type="text" class="form-control" id="validationCustom010" value="" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="exampleDataList" class="form-label">Ciudad</label>
+        <input class="form-control" list="ListaCiudades" id="exampleDataList" placeholder="Escribe para Buscar...">
+        <datalist id="ListaCiudades">
+          <option value="Bogota">
+          <option value="Medellin">
+          <option value="Cali">
+          <option value="Barranquilla">
+          <option value="Santa Marta">
+          <option value="Cartagena">
+          <option value="Tunja">
+          <option value="Girardot">
+          <option value="Villavicencio">
+          <option value="Rioacha">
+        </datalist>
+        <div class="invalid-feedback">
+          Por favor seleciona una ciudad valida.
+        </div>
+      </div>
+      <div class="col-md-2">
+        <label for="validationCustom07" class="form-label">Fecha</label>
+        <input type="date" class="form-control" id="validationCustom07" value="" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Nombre Mascota</label>
+        <input type="text" class="form-control" id="validationCustom02" value="" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom020" class="form-label">Especie Mascota</label>
+        <input type="text" class="form-control" id="validationCustom020" value="" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom021" class="form-label">Raza Mascota</label>
+        <input type="text" class="form-control" id="validationCustom021" value="" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+      <div class="col-md-1">
+        <label for="exampleDataListedad" class="form-label">Edad Años</label>
+        <input class="form-control" list="ListaDatosEdad" id="exampleDataListedad" placeholder="Escribe para Buscar...">
+        <datalist id="ListaDatosEdad">
+          <option value="menos de 1">
+          <option value="1">
+          <option value="2">
+          <option value="3">
+          <option value="4">
+          <option value="5">
+          <option value="6">
+          <option value="7">
+          <option value="8">
+          <option value="9">
+          <option value="10">
+          <option value="11">
+          <option value="12">
+          <option value="13">
+          <option value="14">
+          <option value="15">
+          <option value="mas de 15">  
+
+        </datalist>
+        <div class="invalid-feedback">
+          Por favor seleciona una Edad valida.
+        </div>
+      </div>
+      <div class="col-md-5">
+        <label for="validationCustom03" class="form-label">Direccion</label>
+        <input type="text" class="form-control" id="validationCustom03" required>
+        <div class="invalid-feedback">
+          Please provide a valid city.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom04" class="form-label">Servicio</label>
+        <select class="form-select" id="validationCustom04" required>
+          <option selected disabled value="">Elegir...</option>
+          <option>...</option>
+        </select>
+        <div class="invalid-feedback">
+          Please select a valid state.
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="validationCustom05" class="form-label">Valoracion</label>
+        <input type="text" class="form-control" id="validationCustom05" required>
+        <div class="invalid-feedback">
+          Please provide a valid zip.
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+          <label class="form-check-label" for="invalidCheck">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback">
+            You must agree before submitting.
+          </div>
+        </div>
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
+  </div>
+  
+    </div>
+  </div>
+
     
     </html>
