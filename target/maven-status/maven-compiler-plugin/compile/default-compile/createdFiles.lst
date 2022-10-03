@@ -1,0 +1,15 @@
+beans\Mascota.class
+servlets\ServletMascotaPedir.class
+controller\MascotaController.class
+servlets\PruebaServlet.class
+beans\Services.class
+controller\IMascotaController.class
+beans\Historial.class
+controller\IServicesController.class
+controller\ServicesController.class
+servlets\ServletMascotaRegister.class
+servlets\ServletMascotaLogin.class
+servlets\ServletServicesListar$1.class
+servlets\ServletServicesListar.class
+test\OperacionesBD.class
+connection\DBConnection.class
