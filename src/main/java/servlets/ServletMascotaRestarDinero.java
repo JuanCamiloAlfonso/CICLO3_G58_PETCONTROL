@@ -12,16 +12,16 @@ import javax.servlet.http.HttpServletResponse;
 import controller.MascotaController;
 
 /**
- * Servlet implementation class ServletUsuarioPedir
+ * Servlet implementation class ServletMascotaRestarDinero
  */
-@WebServlet("/ServletMascotaPedir")
-public class ServletMascotaPedir extends HttpServlet {
+@WebServlet("/ServletMascotaRestarDinero")
+public class ServletMascotaRestarDinero extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletMascotaPedir() {
+    public ServletMascotaRestarDinero() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,23 +29,28 @@ public class ServletMascotaPedir extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+                throws ServletException, IOException {
 		MascotaController mascota = new MascotaController();
 		
 		String username = request.getParameter("username");
+		double saldo = Double.parseDouble(request.getParameter("saldo"));
 		
-		String mascotaStr = mascota.pedir(username);
+		String mascotaStr = mascota.restarDinero(username, saldo);
+		response.setContentType("text/html;charset=UTF-8");
+		
 		PrintWriter out = response.getWriter();
 		out.println(mascotaStr);
 		out.flush();
 		out.close();
+		
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+                throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

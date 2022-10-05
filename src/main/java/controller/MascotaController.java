@@ -113,4 +113,16 @@ public class MascotaController implements IMascotaController {
         return "false";
     }
 
+    public String verCantidad(String username) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String modificar(String username, String contrasena, String nombre_mascota, String raza, String sexo, String edad, String peso, String propietario, double saldo, boolean premium) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public String restarDinero(String username, double saldo) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 }

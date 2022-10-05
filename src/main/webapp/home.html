@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+    <link rel="icon" href="img/Sin título-1.jpg">
     <head>
         <meta charset="UTF-8">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -19,10 +20,10 @@
               href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
               integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
               crossorigin="anonymous" />
-
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
         <script src="js/main.js"></script>
-        <link rel="stylesheet" href="css/main.css" />
-        <title>Inicio</title>
+        <link href="css/body.css" rel="stylesheet" type="text/css"/>
+        <title>PetControl</title>
     </head>
     <body style=" background-color: lightblue;">>
 
@@ -55,7 +56,6 @@
                             data-placement="top" title="Ordenar por servicios">servicios
                             <span class="fas fa-sort" id="icono-ordenar"></span></th>
                         <th scope="col">descripcion</th>
-                        <!--        <th scope="col">Copias disponibles</th>  -->
                         <th scope="col">precio</th>
                         <th scope="col">invasividad</th>
                         <th scope="col">medicacion</th>
@@ -68,6 +68,230 @@
                 </tbody>
             </table>
         </main>
+
+        <section id="featured-services" class="featured-services">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                            <h4 class="title"><a href="">Vacunacion</a></h4>
+                            <p class="description">Aplicación de vacunas para rabia, triplefelina influenza y otras</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon"><i class="fas fa-pills"></i></div>
+                            <h4 class="title"><a href="">Peluqueria</a></h4>
+                            <p class="description">corte de cabello para gatos y perros incluye talco y decoracion orejas y pañoletas</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                            <div class="icon"><i class="fas fa-thermometer"></i></div>
+                            <h4 class="title"><a href="">Baño</a></h4>
+                            <p class="description">baño de perros y gatos con shampoo y /o jabones antipulgas olor fragante</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                            <div class="icon"><i class="fas fa-dna"></i></div>
+                            <h4 class="title"><a href="">Desparasitado</a></h4>
+                            <p class="description">servicio de desparasitado por medio de pipeta cutanea o por medio de pastillas</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="500">
+                            <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                            <h4 class="title"><a href="">Profilaxis</a></h4>
+                            <p class="description">limpieza profunda en dientes encias y boca de tu mascota</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="600">
+                            <div class="icon"><i class="fas fa-pills"></i></div>
+                            <h4 class="title"><a href="">Consulta Medica</a></h4>
+                            <p class="description">consulta medica primer nivel para diagnostico de enfermedades y/o falencias</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="700">
+                            <div class="icon"><i class="fas fa-thermometer"></i></div>
+                            <h4 class="title"><a href="">Noche Hospitalizacion</a></h4>
+                            <p class="description">Costo de noche de hospitalizacion por enfermedad cirugia y/o accidente</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="800">
+                            <div class="icon"><i class="fas fa-dna"></i></div>
+                            <h4 class="title"><a href="">Radiografias</a></h4>
+                            <p class="description">radiografia de cuerpo entero torax y/o extremidades</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="900">
+                            <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                            <h4 class="title"><a href="">Cirugia</a></h4>
+                            <p class="description">procedimientos que impliquen intervenir e invadir organos y sistemas internos por corte de tejidos</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="1000">
+                            <div class="icon"><i class="fas fa-pills"></i></div>
+                            <h4 class="title"><a href="">Corte Uñas</a></h4>
+                            <p class="description">corte de uñas para gatos y perros</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="1100">
+                            <div class="icon"><i class="fas fa-thermometer"></i></div>
+                            <h4 class="title"><a href="">Parto</a></h4>
+                            <p class="description">servicio de labores de parto</p>
+                        </div>
+                    </div> 
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="1200">
+                            <div class="icon"><i class="fas fa-dna"></i></div>
+                            <h4 class="title"><a href="">Esterilizacion</a></h4>
+                            <p class="description">Esterilizacion de tu mascota para evitar su reproduccion indeseada</p>
+                        </div>
+                    </div>
+
+
+                    
+                    
+
+                </div>
+
+            </div>
+        </section><!-- End Featured Services Section -->
+
+
+        <section id="gallery" class="gallery">
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>Galeria</h2>
+                    <p>Nuestra Galeria de algunos de nuestros servicios</p>
+                </div>
+            </div>
+
+            <div class="container-fluid">
+                <div class="row g-0">
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/10-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/10-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                               
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/11-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/11-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                               
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/12-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/12-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                               
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/13-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/13-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                              
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/14-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/14-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                                
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/15-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/15-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                              
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/16-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/16-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                              
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/17-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/17-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                                
+                            </a>
+                        </div>
+                    </div>
+                                        <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/18-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/18-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                              
+                            </a>
+                        </div>
+                    </div>
+                                        <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/2-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/2-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                               
+                            </a>
+                        </div>
+                    </div>
+                                        <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/3-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/3-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                             
+                            </a>
+                        </div>
+                    </div>
+                                        <div class="col-lg-3 col-md-4">
+                        <div class="gallery-item">
+                            <a href="img/EDITADAS/4-gigapixel-compressed-width-556px.jpg" class="galelry-lightbox">
+                                <img src="img/EDITADAS/4-gigapixel-compressed-width-556px.jpg" alt="" class="img-fluid">
+                              
+                            </a>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+            </div>
+        </section><!-- End Gallery Section -->
 
     </body>
 </html>

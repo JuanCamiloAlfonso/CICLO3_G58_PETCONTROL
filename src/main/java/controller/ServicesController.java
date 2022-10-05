@@ -25,7 +25,7 @@ public abstract class ServicesController implements IServicesController {
             sql += " order by id_servicio " + orden;
         }
 
-        List<String> servicess = new ArrayList<String>();
+        List<String> serviciosveterin = new ArrayList<String>();
 
         try {
 
@@ -42,9 +42,9 @@ public abstract class ServicesController implements IServicesController {
                 boolean invasividad = rs.getBoolean("invasividad");
                 boolean medicacion = rs.getBoolean("medicacion");
 
-                Services servicio = new Services(id_servicio, servicios, descripcion, precio, cantidad, invasividad, medicacion);
+                Services serviciovet = new Services(id_servicio, servicios, descripcion, precio, cantidad, invasividad, medicacion);
 
-                servicess.add(gson.toJson(servicio));
+                serviciosveterin.add(gson.toJson(serviciovet));
 
             }
         } catch (Exception ex) {
@@ -53,7 +53,11 @@ public abstract class ServicesController implements IServicesController {
             con.desconectar();
         }
 
-        return gson.toJson(servicess);
+        return gson.toJson(serviciosveterin);
 
+    }
+
+    public String Solicitar(int id_servicio, String username) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

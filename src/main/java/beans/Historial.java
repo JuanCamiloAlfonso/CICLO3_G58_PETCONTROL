@@ -18,6 +18,10 @@ public class Historial {
         this.genero = genero;
     }
 
+    public Historial(int id_servicio, String nombre_mascota, String servicios, int precio, int cantidad, Date fecha) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
     public String getUsername() {
         return username;
     }

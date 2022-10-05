@@ -66,37 +66,37 @@ function mostrarServices(servicess) {
 
     let contenido = "";
 
-    $.each(servicess, function (index, servicio) {
+    $.each(servicess, function (index, services) {
 
-        servicio = JSON.parse(servicio);
+        services = JSON.parse(services);
         let precio;
 
-        if (servicio.cantidad > 0) {
+        if (services.cantidad > 0) {
 
             if (user.premium) {
 
-                if (servicio.novedad) {
+                if (services.novedad) {
                     precio = (2 - (2 * 0.1));
                 } else {
                     precio = (1 - (1 * 0.1));
                 }
             } else {
-                if (servicio.novedad) {
+                if (services.novedad) {
                     precio = 2;
                 } else {
                     precio = 1;
                 }
             }
 
-            contenido += '<tr><th scope="row">' + Services.id_servicio + '</th>' +
-                    '<td>' + Services.servicios + '</td>' +
-                    '<td>' + Services.descripcion + '</td>' +
-                    '<td>' + Services.precio + '</td>' +
-                    '<td>' + Services.cantidad + '</td>' +
-                    '<td>' + Services.invasividad + '</td>' +
-                    '<td>' + Services.medicacion + '</td>' +
-                    '<td><input type="checkbox" name="novedad" id="novedad' + Services.id_servicio + '" disabled ';
-            if (Services.novedad) {
+            contenido += '<tr><th scope="row">' + services.id_servicio + '</th>' +
+                    '<td>' + services.servicios + '</td>' +
+                    '<td>' + services.descripcion + '</td>' +
+                    '<td>' + services.precio + '</td>' +
+                    '<td>' + services.cantidad + '</td>' +
+                    '<td>' + services.invasividad + '</td>' +
+                    '<td>' + services.medicacion + '</td>' +
+                    '<td><input type="checkbox" name="novedad" id="novedad' + services.id_servicio + '" disabled ';
+            if (services.novedad) {
                 contenido += 'checked';
             }
             contenido += '></td>' +
@@ -116,20 +116,21 @@ function mostrarServices(servicess) {
 function ordenarServices() {
 
     if ($("#icono-ordenar").hasClass("fa-sort")) {
-        getPeliculas(true, "ASC");
+        getServices(true, "ASC");
         $("#icono-ordenar").removeClass("fa-sort");
         $("#icono-ordenar").addClass("fa-sort-down");
     } else if ($("#icono-ordenar").hasClass("fa-sort-down")) {
-        getPeliculas(true, "DESC");
+        getServices(true, "DESC");
         $("#icono-ordenar").removeClass("fa-sort-down");
         $("#icono-ordenar").addClass("fa-sort-up");
     } else if ($("#icono-ordenar").hasClass("fa-sort-up")) {
-        getPeliculas(false, "ASC");
+        getServices(false, "ASC");
         $("#icono-ordenar").removeClass("fa-sort-up");
         $("#icono-ordenar").addClass("fa-sort");
     }
 }
-function alquilarServices(id, precio) {
+
+function alquilarPelicula(id, precio) {
 
     $.ajax({
         type: "GET",

@@ -12,16 +12,16 @@ import javax.servlet.http.HttpServletResponse;
 import controller.ServicesController;
 
 /**
- * Servlet implementation class ServletPeliculaListar
+ * Servlet implementation class ServletPeliculaAlquilar
  */
-@WebServlet("/ServletServicesListar")
-public class ServletServicesListar extends HttpServlet {
+@WebServlet("/ServletPeliculaAlquilar")
+public class ServletServicesSolicitar extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ServletServicesListar() {
+    public ServletServicesSolicitar() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -29,7 +29,8 @@ public class ServletServicesListar extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+                throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		ServicesController serviciovet = new ServicesController() {
                     @Override
@@ -53,14 +54,14 @@ public class ServletServicesListar extends HttpServlet {
                     }
                 };
 		
-		boolean ordenar = Boolean.parseBoolean(request.getParameter("ordenar"));
-		String orden = request.getParameter("orden");
+		int id = Integer.parseInt(request.getParameter("id"));
+		String username = request.getParameter("username");
 		
-		String serviciovetStr = serviciovet.listar(ordenar, orden);
+		String servicioStr = serviciovet.alquilar(id,username);
+		
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = response.getWriter();
-		
-		out.println(serviciovetStr);
+		out.println(servicioStr);
 		out.flush();
 		out.close();
 		
@@ -69,7 +70,8 @@ public class ServletServicesListar extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
+                throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

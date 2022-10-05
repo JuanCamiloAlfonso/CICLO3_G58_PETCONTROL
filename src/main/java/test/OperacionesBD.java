@@ -6,13 +6,13 @@ import java.sql.Statement;
 
 public class OperacionesBD {
     public static void main(String[] args) {
-        actualizarServicio(1, "*****PRUEBA 22****");
+        actualizarServicio(5, "*****PRUEBA DE CONEXION****");
         listarServicio();
         
     }
     public static void actualizarServicio(int id_servicio, String servicios){
     DBConnection con = new DBConnection();
-    String sql = "UPDATE servicio SET servicios = '"+ servicios + " ' WHERE id_servicio = " + id_servicio;
+    String sql = "UPDATE services SET servicios = '"+ servicios + " ' WHERE id_servicio = " + id_servicio;
         try {
             Statement st = con.getConnection().createStatement();
             st.executeUpdate(sql);
@@ -27,7 +27,7 @@ public class OperacionesBD {
 
     public static void listarServicio(){
     DBConnection con = new DBConnection();
-    String sql = "SELECT * FROM servicio";
+    String sql = "SELECT * FROM services";
         try {
             Statement st = con.getConnection().createStatement();
             ResultSet rs = st.executeQuery(sql);
